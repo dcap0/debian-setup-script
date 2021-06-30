@@ -1,24 +1,44 @@
 #!/bin/bash
 
+
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+echo 'Beginning Execution'
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+
 cd
+
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+echo 'Installing utilities'
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
 sudo apt update
 sudo apt install snapd git vim openjdk-11-jdk  openjdk-8-jdk torbrowser-launcher curl python3-pip htop trash-cli net-tools mlocate software-properties-common apt-transport-https wget terminator websocat rkhunter
 
 sudo pip3 install thefuck
 
+
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+echo 'Installing spotify'
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 sudo snap install --classic spotify
 
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+echo 'Installing VSCode'
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+sudo snap install code
+
+
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+echo 'Creating user bin directory and Installing Intellij IDE'
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 mkdir ./bin && cd ./bin
-wget https://download.jetbrains.com/idea/ideaIU-2021.1.3.tar.gz
-tar -xvf ./ideaIU-2021.1.3.tar.gz
-
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-
-sudo apt update
-sudo apt install code
+wget https://download.jetbrains.com/idea/ideaIU-2021.1.3.tar.gz && tar -xvf ./ideaIU-2021.1.3.tar.gz
 
 cd
+
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+echo 'Adding useful aliases to .bashrc (Also adding a sfw command for one of the utilities)'
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
 echo 'alias update="sudo apt update && sudo apt full-upgrade -y"' >> ~/.bashrc
 echo 'alias jcv="sudo update-alternatives --config javac' >> ~/.bashrc
@@ -26,7 +46,19 @@ echo 'alias jdkv="sudo update-alternatives --config java' >> ~/.bashrc
 echo 'eval $(thefuck --alias)' >> ~/.bashrc
 echo 'eval $(thefuck --alias plz)' >> ~/.bashrc
 
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+echo 'Starting ssh key generation'
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 ssh-keygen
 
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+echo 'Applying new aliases'
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+
 source ~/.bashrc
+
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+echo 'Script Execution Complete! Have fun.'
+echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+
  
