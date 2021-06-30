@@ -3,7 +3,7 @@
 cd
 
 sudo apt update
-sudo apt install snapd git vim openjdk-11-jdk torbrowser-launcher curl python3-pip htop trash-cli net-tools mlocate software-properties-common apt-transport-https wget
+sudo apt install snapd git vim openjdk-11-jdk  openjdk-8-jdk torbrowser-launcher curl python3-pip htop trash-cli net-tools mlocate software-properties-common apt-transport-https wget
 
 sudo pip3 install thefuck
 
@@ -21,6 +21,8 @@ sudo apt install code
 cd
 
 echo 'alias update="sudo apt update && sudo apt full-upgrade -y"' >> ~/.bashrc
+echo 'alias jcv="sudo update-alternatives --config javac' >> ~/.bashrc
+echo 'alias jdkv="sudo update-alternatives --config java' >> ~/.bashrc
 echo 'eval $(thefuck --alias)' >> ~/.bashrc
 echo 'eval $(thefuck --alias plz)' >> ~/.bashrc
 
