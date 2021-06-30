@@ -1,6 +1,73 @@
 #!/bin/bash
 
 
+
+#####################################
+#~~~~~~~~~~~~~Help Command~~~~~~~~~~#
+#####################################
+Help()
+{
+        #Displays the help information
+
+	echo "~~~~~~~~~~~~~~~~~~~"
+        echo "Bash script for when I blow out my OS! You know... again."
+	echo "Installs a bunch of useful utilities, makes a few aliases."
+	echo "~~~~~~~~~~~~~~~~~~~"
+	echo "Run chmod +x on this file to make it executable"
+	echo "Run the script!"
+	echo "Some of the installs require sudo, so it will prompt you for credentials!"
+	echo "~~~~~~~~~~~~~~~~~~~"
+	echo "-h ~ shows this command"
+	echo "-v ~ shows the version"
+	echo "-a ~ shows the author info"
+}
+
+#####################################
+#~~~~~~~~~~~~Version Command~~~~~~~~#
+#####################################
+Version()
+{
+        echo "Version 1.0"
+}
+
+#####################################
+#~~~~~~~~~~~~Author Command~~~~~~~~~#
+#####################################
+Author()
+{
+	echo "~~~~~~Author~~~~~~"
+	echo "Dennis Capone (DDMAC)"
+        echo "https://github.com/dcap0"
+	echo "~~~~~~~~~~~~~~~~~~~"
+
+	echo "Feel free to fork and edit this!"
+}
+
+
+
+while getopts ":hav" option;
+do
+	case "$option" in
+		\?)
+			echo "Invalid Option"
+			exit;;
+		h)
+			Help
+			exit;;
+		a)
+			Author
+			exit;;
+		v)
+			Version
+			exit;
+	esac
+done
+
+
+#####################################
+#~~~~~~~~~~~~~Main Body~~~~~~~~~~~~~#
+#####################################
+
 echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 echo 'Beginning Execution'
 echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
