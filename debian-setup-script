@@ -20,10 +20,9 @@ sudo apt install code
 
 cd
 
-echo 'alias update="sudo apt update && sudo apt full-upgrade -y"
-eval $(thefuck --alias)
-eval $(thefuck --alias plz)
-
+echo 'alias update="sudo apt update && sudo apt full-upgrade -y"' >> ~/.bashrc
+echo 'eval $(thefuck --alias)' >> ~/.bashrc
+echo 'eval $(thefuck --alias plz)' >> ~/.bashrc
 
 ssh-keygen
 
