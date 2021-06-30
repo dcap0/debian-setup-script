@@ -3,7 +3,7 @@
 cd
 
 sudo apt update
-sudo apt install snapd git vim openjdk-11-jdk  openjdk-8-jdk torbrowser-launcher curl python3-pip htop trash-cli net-tools mlocate software-properties-common apt-transport-https wget
+sudo apt install snapd git vim openjdk-11-jdk  openjdk-8-jdk torbrowser-launcher curl python3-pip htop trash-cli net-tools mlocate software-properties-common apt-transport-https wget terminator websocat rkhunter
 
 sudo pip3 install thefuck
 
