@@ -79,7 +79,7 @@ echo 'Installing utilities'
 echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
 sudo apt update
-sudo apt install snapd git vim openjdk-11-jdk  openjdk-8-jdk torbrowser-launcher curl python3-pip htop trash-cli net-tools mlocate software-properties-common apt-transport-https wget terminator websocat rkhunter
+sudo apt install snapd git vim openjdk-11-jdk  openjdk-8-jdk torbrowser-launcher curl python3-pip htop trash-cli net-tools mlocate software-properties-common apt-transport-https wget terminator rkhunter
 
 sudo pip3 install thefuck
 
@@ -98,6 +98,7 @@ sudo snap install code
 echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 echo 'Creating user bin directory and Installing Intellij IDE'
 echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+cd
 mkdir ./bin && cd ./bin
 wget https://download.jetbrains.com/idea/ideaIU-2021.1.3.tar.gz && tar -xvf ./ideaIU-2021.1.3.tar.gz
 
