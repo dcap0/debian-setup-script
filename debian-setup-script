@@ -109,8 +109,8 @@ echo 'Adding useful aliases to .bashrc (Also adding a sfw command for one of the
 echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
 echo 'alias update="sudo apt update && sudo apt full-upgrade -y"' >> ~/.bashrc
-echo 'alias jcv="sudo update-alternatives --config javac' >> ~/.bashrc
-echo 'alias jdkv="sudo update-alternatives --config java' >> ~/.bashrc
+echo 'alias jcv="sudo update-alternatives --config javac"' >> ~/.bashrc
+echo 'alias jdkv="sudo update-alternatives --config java"' >> ~/.bashrc
 echo 'eval $(thefuck --alias)' >> ~/.bashrc
 echo 'eval $(thefuck --alias plz)' >> ~/.bashrc
 
